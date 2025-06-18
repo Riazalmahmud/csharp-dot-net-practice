@@ -1,0 +1,29 @@
+﻿#define DEBUG
+using System;
+using System.Diagnostics;
+
+
+class MyClass
+{
+  [Obsolete("Don't use OldMethod, use NewMethod instead", true)]
+
+  static void NewMethod()
+  {
+    Console.WriteLine("It is the new method");
+  }
+
+  static void OldMethod()
+  {
+    Console.WriteLine("It is the old method");
+  }
+  static void OldMethod2()
+  {
+    Console.WriteLine("It is the old method");
+  }
+  static void Main(string[] args)
+  {
+    NewMethod();
+  }
+}
+
+
