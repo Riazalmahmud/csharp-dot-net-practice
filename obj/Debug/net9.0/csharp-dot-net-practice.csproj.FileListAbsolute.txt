@@ -12,3 +12,4 @@ C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\refint\csharp-dot-ne
 C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.pdb
 C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.genruntimeconfig.cache
 C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\ref\csharp-dot-net-practice.dll
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.sourcelink.json
