@@ -1,0 +1,21 @@
+﻿
+#define PI
+using System;
+
+
+
+
+
+class InterfaceApplication
+{
+  static void Main(string[] args)
+  {
+#if (PI)
+    Console.WriteLine("difined pi is");
+#else
+Console.WriteLine("difined pi is not");
+#endif
+  }
+
+
+}

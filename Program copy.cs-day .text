@@ -1,0 +1,41 @@
+﻿
+
+using System;
+using System.Diagnostics;
+
+
+enum Weekday
+{
+  Sunday,
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday
+}
+class Program
+{
+  static void Main()
+  {
+    Weekday day = Weekday.Saturday;
+
+    switch (day)
+    {
+      case Weekday.Friday:
+        Console.WriteLine("Today is Friday");
+        break;
+      case Weekday.Saturday:
+        Console.WriteLine("Today is Saturday");
+        break;
+      case Weekday.Sunday:
+        Console.WriteLine("Today is Sunday");
+        break;
+      default:
+        Console.WriteLine("Unknown day");
+        break;
+
+    }
+
+  }
+}

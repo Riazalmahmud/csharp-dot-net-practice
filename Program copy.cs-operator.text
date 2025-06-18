@@ -1,0 +1,20 @@
+﻿using System;
+
+namespace TestNameSpace
+{
+  class OperatorApplication
+  {
+    private double length;
+    private double breadth;
+    private double height;
+
+    public double getVolume()
+    {
+      return length * breadth * height;
+    }
+
+    
+    static void Main(string[] args)
+    { }
+  }
+}

@@ -1,0 +1,30 @@
+﻿using System;
+
+enum TodayEnum
+{
+  Sunday,
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday
+
+}
+class EnumPractice
+{
+
+  static void Main(string[] args)
+  {
+    // Compare today's date (DateOnly) with today's date (DateTime)
+
+    DayOfWeek today = DateTime.Now.DayOfWeek;
+    DayOfWeek dayOfWeek = (DayOfWeek)(int)DayOfWeek.Friday;
+    Console.WriteLine("Today: " + today);
+    DateTime date = DateTime.Now;
+    int dayOfWeekNumber = (int)date.DayOfWeek;
+    Console.WriteLine("Day of Week Number: " + dayOfWeekNumber);
+
+  }
+
+}

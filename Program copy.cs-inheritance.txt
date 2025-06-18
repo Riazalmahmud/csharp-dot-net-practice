@@ -1,0 +1,35 @@
+﻿using System;
+
+namespace TestNameSpace
+{
+
+  class Shape
+  {
+    public int height;
+    public int width;
+
+  }
+
+  class RectangleShape : Shape
+  {
+    public int MakeRectangle()
+    {
+      return this.width * this.height;
+    }
+  }
+
+
+
+
+  class MainClass
+  {
+    static void Main(string[] args)
+    {
+      RectangleShape setShapeValue = new RectangleShape();
+      setShapeValue.height = 20;
+      setShapeValue.width = 30;
+      Console.WriteLine("Total area: {0}", setShapeValue.MakeRectangle());
+
+    }
+  }
+}

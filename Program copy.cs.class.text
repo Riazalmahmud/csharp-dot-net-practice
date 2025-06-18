@@ -1,0 +1,21 @@
+﻿using System;
+
+namespace TestNameSpace
+{
+
+  class Class2
+  {
+   public void  sumToNum(int a, int b)
+    {
+      Console.WriteLine(a + b);
+    }
+  }
+  class TestClass
+  {
+    static void Main(string[] args)
+    {
+      Class2 cls = new Class2();
+      cls.sumToNum(2, 5);
+    }
+  }
+}

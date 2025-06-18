@@ -1,0 +1,14 @@
+C:\web development\csharp-dot-net-practice\bin\Debug\net9.0\csharp-dot-net-practice.exe
+C:\web development\csharp-dot-net-practice\bin\Debug\net9.0\csharp-dot-net-practice.deps.json
+C:\web development\csharp-dot-net-practice\bin\Debug\net9.0\csharp-dot-net-practice.runtimeconfig.json
+C:\web development\csharp-dot-net-practice\bin\Debug\net9.0\csharp-dot-net-practice.dll
+C:\web development\csharp-dot-net-practice\bin\Debug\net9.0\csharp-dot-net-practice.pdb
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.AssemblyInfoInputs.cache
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.AssemblyInfo.cs
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.csproj.CoreCompileInputs.cache
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.dll
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\refint\csharp-dot-net-practice.dll
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.pdb
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\csharp-dot-net-practice.genruntimeconfig.cache
+C:\web development\csharp-dot-net-practice\obj\Debug\net9.0\ref\csharp-dot-net-practice.dll

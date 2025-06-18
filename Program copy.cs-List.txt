@@ -1,0 +1,21 @@
+﻿
+using System;
+using System.Collections.Generic;
+
+
+class InterfaceListApplication
+{
+  static void Main(string[] args)
+  {
+    IList<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
+    numbers.Add(8);
+    numbers.Remove(2);
+    Console.WriteLine("Element at index 2: " + numbers[2]);
+    foreach (var num in numbers)
+    {
+      Console.WriteLine("Number at index " + num);
+    }
+  }
+
+
+}

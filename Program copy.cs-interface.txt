@@ -1,0 +1,71 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System;
+namespace TestNameSpace
+{
+  // interface IAnimalSound
+  // {
+  //   void MakeSound();
+  // }
+  // class DogSound : IAnimalSound
+  // {
+  //   public void MakeSound()
+  //   {
+  //     Console.WriteLine("Dog sound created");
+  //   }
+  // }
+
+  interface ITransaction
+  {
+    void ShowTransaction();
+    Double GetAmount();
+  }
+
+  class Transaction : ITransaction
+  {
+    private string tCode;
+    private string tDate;
+    private double tAmount;
+    // public Transaction()
+    // {
+    //   tCode = " ";
+    //   tDate = " ";
+    //   tAmount = 0.0;
+    // }
+
+    public Transaction(string c, string d, double a)
+    {
+      tCode = c;
+      tDate = d;
+      tAmount = a;
+    }
+    public Double GetAmount()
+    {
+      return tAmount;
+    }
+
+    public void ShowTransaction()
+    {
+      Console.WriteLine("Transaction: {0}", tCode);
+      Console.WriteLine("Date: {0}", tDate);
+      Console.WriteLine("Amount: {0}", GetAmount());
+    }
+  }
+  class InterfaceApplication
+  {
+
+
+
+    static void Main(string[] args)
+    {
+
+      Transaction t1 = new Transaction("001", "8/10/2012", 78900.00);
+      t1.ShowTransaction();
+      // DogSound dogSn = new DogSound();
+      // dogSn.MakeSound();
+
+
+    }
+  }
+}

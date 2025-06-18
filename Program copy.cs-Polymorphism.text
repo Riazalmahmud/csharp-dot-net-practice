@@ -1,0 +1,34 @@
+﻿using System;
+
+namespace TestNameSpace
+{
+
+  class PolymorphismApplication
+  {
+
+    void printVl(string name)
+    {
+      Console.WriteLine("Polymorphism string: " + name);
+    }
+    void printVl(int age)
+    {
+      Console.WriteLine("Polymorphism string: " + age);
+    }
+    void printVl(Double width)
+    {
+      Console.WriteLine("Polymorphism string: " + width);
+    }
+
+    static void Main(string[] args)
+    {
+      PolymorphismApplication poly = new PolymorphismApplication();
+      poly.printVl(20);
+      poly.printVl(20.5);
+      poly.printVl("riaz");
+      poly.printVl("miaz");
+
+    }
+  }
+
+  
+}

@@ -1,0 +1,54 @@
+﻿
+using System;
+using System.Collections;
+
+
+class DemoEnumerable : IEnumerable, IEnumerator
+{
+  private int[] numbers = { 1, 2, 4, 5, 6 };
+  private int currentIndex = -1;
+
+
+  public IEnumerator GetEnumerator()
+  {
+    return this;
+  }
+  public Object Current
+  {
+    get
+    {
+      if (currentIndex == -1 || currentIndex >= numbers.Length)
+      {
+        throw new InvalidOperationException();
+      }
+      return numbers[currentIndex];
+    }
+  }
+
+  public bool MoveNext()
+  {
+    if (currentIndex < numbers.Length - 1)
+    {
+      currentIndex++;
+      return true;
+    }
+    return false;
+  }
+  public void Reset()
+  {
+
+  }
+}
+
+class InterfaceApplication
+{
+  static void Main(string[] args)
+  {
+    DemoEnumerable domo = new DemoEnumerable();
+    foreach (var dm in domo)
+    {
+      Console.WriteLine("dm is " + dm);
+    }
+
+  }
+}
