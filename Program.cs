@@ -33,10 +33,40 @@ namespace ReflectionTest
 
   class ReflectionClass
   {
+
+    static bool IsPalindrome(int x)
+    {
+
+      int temp = x;
+      int reversed = 0;
+
+      if (temp <0 || (temp % 10 == 0 && temp != 0))
+      {
+        return false; // Negative numbers and multiples of 10 (except 0) are not palindromes
+      }
+      while (temp > 0)
+      {
+        int digit = temp % 10;
+        reversed = reversed * 10 + digit;
+        temp /= 10;
+      }
+      return x == reversed;
+
+   
+    }
+
+
     static void Main(string[] args)
     {
-System.Reflection.MethodInfo MemberInfo info = typeof(MyClass);
-object[] at 
+      if (IsPalindrome(121))
+      {
+        Console.WriteLine("121 is a palindrome.");
+      }
+      else
+      {
+        Console.WriteLine("121 is not a palindrome.");
+      }
+
     }
   }
 }
