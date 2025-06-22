@@ -34,53 +34,40 @@ namespace ReflectionTest
   class ReflectionClass
   {
 
-    static int romanToInt(string x)
+    static string largestCommonPrefix(string[] strs)
     {
-      var romanToInt = new Dictionary<char, int>
-      {
-        {'I', 1},
-        {'V', 5},
-        {'X', 10},
-        {'L', 50},
-        {'C', 100},
-        {'D', 500},
-        {'M', 1000}
-      };
-      int result = 0;
 
-      if (!IsValidRoman(x))
+      Array.Sort(strs);
+      string first = strs[0];
+      string last = strs[strs.Length - 1];
+      int minLength = Math.Min(first.Length, last.Length);
+
+      for (int i = 0; i < minLength; i++)
       {
-        Console.WriteLine($"Invalid Roman numeral: {x}");
-        return -1; // অথবা throw new Exception("Invalid Roman numeral");
-      }
-      for (int i = 0; i < x.Length; i++)
-      {
-        int num1 = romanToInt[x[i]];
-        int num2 = i > 0 ? romanToInt[x[i - 1]] : 0;
-        if (i > 0 && romanToInt[x[i]] > romanToInt[x[i - 1]])
+        string str1 = first[i].ToString();
+        string str2 = last[i].ToString();
+        // Debugging output to trace the comparison
+        Console.WriteLine($"Comparingstr and {str1}" + $"{str2} at index {i}");
+        Console.WriteLine($"Comparing {first[i]} and {last[i]} at index {i}");
+        if (first[i] != last[i])
         {
-          result += romanToInt[x[i]] - 2 * romanToInt[x[i - 1]];
-        }
-        else
-        {
-          result += romanToInt[x[i]];
+          return first.Substring(0, i);
         }
       }
-      Console.WriteLine($"Roman numeral {x} converted to integer: {result}");
-      return result;
+
+      return first.Substring(0, minLength);   
     }
 
-    static bool IsValidRoman(string s)
-    {
-      // রোমান সংখ্যার জন্য একটি regular expression
-      var regex = new System.Text.RegularExpressions.Regex(
-          "^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"
-      );
-      return regex.IsMatch(s);
-    }
+
+
+
+
     static void Main(string[] args)
     {
-      romanToInt("VIII");
+      string[] arr = { "geeksforgeeks", "geeks", "geek",
+                          "geezer", "geeky" };
+      string result = largestCommonPrefix(arr);
+      Console.WriteLine("The largest common prefix is: " + result);
     }
   }
 }
