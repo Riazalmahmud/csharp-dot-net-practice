@@ -32,34 +32,39 @@ namespace ReflectionTest
 {
 
 
-  class RemoveDuplicates
+  class SearchInsertPosition
   {
-    public static int RemoveDuplicatesArr(int[] nums)
+    public static int SearchInsert(int[] nums, int target)
     {
-
-      if (nums.Length == 0)
+      int left = 0;
+      int right = nums.Length - 1;
+      while (left <= right)
       {
-        return 0;
-      }
-      int numbers = 1;
-      for (int i = 1; i < nums.Length; i++)
-      {
-        if (nums[i] != nums[i - 1])
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target)
         {
-          nums[numbers] = nums[i];
-          numbers++;
+          return mid; // Target found, return index
+        }
+        else if (nums[mid] < target)
+        {
+          left = mid + 1; // Target is in the right half
+        }
+        else
+        {
+          right = mid - 1; // Target is in the left half
         }
       }
-
-      return numbers;
+      // Target not found, return the index where it would be inserted
+      return left;
     }
-
 
 
     static void Main(string[] args)
     {
-      int result = RemoveDuplicatesArr(new int[] { 1, 1, 2, 2, 2 });
-      Console.WriteLine("Number of unique elements: " + result);
+
+      int result = SearchInsert(new int[] { 1, 3, 5, 6 }, 5);
+      Console.WriteLine("Result of SearchInsert: " + result);
+
     }
   }
 }

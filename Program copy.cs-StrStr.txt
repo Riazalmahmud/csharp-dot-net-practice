@@ -1,0 +1,62 @@
+﻿using System;
+using System.Dynamic;
+using System.Runtime.InteropServices;
+[AttributeUsage(AttributeTargets.All, AllowMultiple = true)]
+
+class HelpAttribute : System.Attribute
+{
+
+  public readonly string url;
+
+  private string topic;
+
+  public string Topic
+  {
+    get { return topic; }
+    set { topic = value; }
+  }
+  public HelpAttribute(string url)
+  {
+    this.url = url;
+
+  }
+
+}
+// Apply the attribute to a class
+[Help("Information on the class MyClass", Topic = "Class Info")]
+class MyClass
+{
+}
+
+namespace ReflectionTest
+{
+
+
+  class RemoveDuplicates
+  {
+    public static int StrStr(string haystack, string needle)
+    {
+      if (string.IsNullOrEmpty(needle)) return 0;
+      int needleLength = needle.Length;
+      int haystackLength = haystack.Length;
+      int minLength = Math.Min(needleLength, haystackLength);
+
+      for (int i = 0; i <= minLength; i++)
+      {
+        if (haystack.Substring(i, needle.Length) == needle)
+          return i;
+      }
+      return -1;
+    }
+
+
+
+    static void Main(string[] args)
+    {
+
+      int result = StrStr("hello", "ll");
+      Console.WriteLine("Result of StrStr: " + result);
+
+    }
+  }
+}
