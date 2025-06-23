@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Dynamic;
+using System.Runtime.InteropServices;
 [AttributeUsage(AttributeTargets.All, AllowMultiple = true)]
 
 class HelpAttribute : System.Attribute
@@ -31,43 +32,34 @@ namespace ReflectionTest
 {
 
 
-  class ReflectionClass
+  class RemoveDuplicates
   {
-
-    static string largestCommonPrefix(string[] strs)
+    public static int RemoveDuplicatesArr(int[] nums)
     {
 
-      Array.Sort(strs);
-      string first = strs[0];
-      string last = strs[strs.Length - 1];
-      int minLength = Math.Min(first.Length, last.Length);
-
-      for (int i = 0; i < minLength; i++)
+      if (nums.Length == 0)
       {
-        string str1 = first[i].ToString();
-        string str2 = last[i].ToString();
-        // Debugging output to trace the comparison
-        Console.WriteLine($"Comparingstr and {str1}" + $"{str2} at index {i}");
-        Console.WriteLine($"Comparing {first[i]} and {last[i]} at index {i}");
-        if (first[i] != last[i])
+        return 0;
+      }
+      int numbers = 1;
+      for (int i = 1; i < nums.Length; i++)
+      {
+        if (nums[i] != nums[i - 1])
         {
-          return first.Substring(0, i);
+          nums[numbers] = nums[i];
+          numbers++;
         }
       }
 
-      return first.Substring(0, minLength);   
+      return numbers;
     }
-
-
 
 
 
     static void Main(string[] args)
     {
-      string[] arr = { "geeksforgeeks", "geeks", "geek",
-                          "geezer", "geeky" };
-      string result = largestCommonPrefix(arr);
-      Console.WriteLine("The largest common prefix is: " + result);
+      int result = RemoveDuplicatesArr(new int[] { 1, 1, 2, 2, 2 });
+      Console.WriteLine("Number of unique elements: " + result);
     }
   }
 }
